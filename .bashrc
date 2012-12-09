@@ -22,9 +22,9 @@ function pushbnv(){
 
     current_dir=$PWD
     cd
-    cp .bashrc ./bNv/.
-    cp .vimrc ./bNv/.
-    cd bNv
+    cp .bashrc ./bashrc-and-vimrc/.
+    cp .vimrc ./bashrc-and-vimrc/.
+    cd bashrc-and-vimrc
     git commit -am "$1"
     git push
     cd $current_dir
