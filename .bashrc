@@ -1,3 +1,5 @@
+# Author: Pankaj Kumar (me@panks.me)
+
 source ~/.kde-bashrc
 export PATH=$PATH:~/mybins
 
@@ -41,7 +43,8 @@ function setupKDEBE(){
 #   \n with \\\n
 
     echo "Setting up KDE Build Environment.."
-    echo "Creating directoried 'mybin' and 'kde'"
+    cd
+    echo "Creating directoried 'mybin' and 'kde' in ~"
     mkdir mybins kde
     cd mybins
     echo "Generating findup"
