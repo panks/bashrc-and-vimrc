@@ -113,13 +113,33 @@ fi
 
 # ====================== Ubuntu default .bashrc over ==========================
 
-
+source /home/panks/.rvm/scripts/rvm
 source ~/.kde-bashrc
 export PATH=$PATH:~/mybins
 
 alias lsa='ls -a'
 alias agi='sudo apt-get install'
 alias bl30='xbacklight -set 30'
+alias rig='echo "y" | rake install && rake generate'
+alias loadb='source ~/.bashrc'
+
+
+function mfind(){
+    echo ""
+    find . -name *$1*
+    echo ""
+}
+
+
+function fno(){
+
+    find . -name *$1* -exec vim {} \;
+}
+
+function rigt(){
+
+    echo "y" | rake install[$1] && rake generate
+}
 
 function cdb(){
 
@@ -128,6 +148,11 @@ function cdb(){
             cd .. 
         done 
 }
+
+function mkc(){
+    mkdir $1 && cd $1
+}
+
 
 function bl(){
 
@@ -555,3 +580,5 @@ echo" > .build-config
     mkdir inst home build src
     echo "Done.."
 }
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
