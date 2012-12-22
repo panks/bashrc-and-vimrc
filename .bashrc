@@ -182,6 +182,7 @@ function setupKDEBE(){
 #   \n with \\\n
 
     echo "Setting up KDE Build Environment.."
+    current_dir=$PWD
     cd
     echo "Creating directoried 'mybin' and 'kde' in ~"
     mkdir mybins kde
@@ -579,6 +580,7 @@ echo" > .build-config
     chmod +x .build-config
     mkdir inst home build src
     echo "Done.."
+    cd $current_dir
 }
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
