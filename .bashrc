@@ -123,6 +123,11 @@ alias bl30='xbacklight -set 30'
 alias rig='echo "y" | rake install && rake generate'
 alias loadb='source ~/.bashrc'
 
+function cpanksme(){
+
+    ssh panks@182.50.148.128
+}
+
 
 function mfind(){
     echo ""
